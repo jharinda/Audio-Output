@@ -43,7 +43,15 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
 {
     for (int channel = 0; channel < bufferToFill.buffer->getNumChannels();channel++)
     {
+        float* const buffer = bufferToFill.buffer->getWritePointer(channel, bufferToFill.startSample);
 
+        for (int sample = 0; sample < bufferToFill.numSamples; sample++)
+        {
+            buffer[sample] =( random.nextFloat() * 2.0f - 1.0f)* 0.1f;
+        }
+        
+
+        
     }
 }
 

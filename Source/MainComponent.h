@@ -26,7 +26,7 @@ public:
 private:
     //==============================================================================
     // Your private member variables go here...
-
+    juce::Random random;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
